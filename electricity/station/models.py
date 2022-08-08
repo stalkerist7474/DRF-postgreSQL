@@ -22,6 +22,7 @@ class Station(models.Model):
 class Worker(models.Model):
     name = models.CharField(max_length = 255)
     position = models.CharField(max_length = 255,null=True)
+    place_for_work = models.ForeignKey(Station, on_delete = models.CASCADE,null=True)
 
     class Meta:
         
@@ -29,6 +30,6 @@ class Worker(models.Model):
         verbose_name_plural = 'Работники'
 
     def __str__(self):
-        return self.Name
+        return self.name
     
 
