@@ -16,11 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 
-from station.views import StationAPIView
+from station.views import StationAPIView, WorkerAPIView
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('stations/', StationAPIView.as_view()),
+    path('worker/', WorkerAPIView.as_view()),
 ]
