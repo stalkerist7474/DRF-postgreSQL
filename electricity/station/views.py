@@ -12,6 +12,9 @@ class StationAPIView(generics.ListAPIView):
     serializer_class = StationSerializer
 
 
+
+
+#представление без сериализатора
 class WorkerAPIView(APIView):
     def get(self, request):
         man = Worker.objects.all().values()
@@ -23,9 +26,6 @@ class WorkerAPIView(APIView):
             name = request.data['name'],
             position = request.data['position'],
             place_for_work_id = request.data['place_for_work_id'],
-
-
-
         )
         return Response ({'new worker':model_to_dict(man_add)})
 
