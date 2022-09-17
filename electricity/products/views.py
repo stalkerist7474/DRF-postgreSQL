@@ -1,4 +1,4 @@
-from urllib import response
+""" from urllib import response
 from django.shortcuts import render
 from .models import Station, Worker
 from .serializer import StationSerializer
@@ -29,3 +29,4 @@ class WorkerAPIView(APIView):
         )
         return Response ({'new worker':model_to_dict(man_add)})
 
+ """
